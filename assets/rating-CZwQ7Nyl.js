@@ -1,0 +1,1 @@
+function r(n,t){return 1/(1+Math.pow(10,(t-n)/400))}function p(n,t,c,e){const o=e<10?48:e<30?32:20;return Math.round(n+o*(c-r(n,t)))}function h(n){if(!n.length)return null;const t=n.reduce((o,a)=>o+a.opp,0)/n.length,c=n.reduce((o,a)=>o+a.score,0)/n.length,e=Math.min(.99,Math.max(.01,c));return Math.round(t+400*Math.log10(e/(1-e)))}export{p as e,h as p};
