@@ -1,6 +1,6 @@
 // Kingside offline cache: cache-first for static assets (engine, pieces, data),
 // network-first for the HTML shell so updates arrive when online.
-const CACHE = 'kingside-v1';
+const CACHE = 'kingside-v2';
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./', './index.html', './engine/sf.js', './engine/sf.wasm', './data/openings.json', './data/puzzles.json']).catch(() => {})));
   self.skipWaiting();
